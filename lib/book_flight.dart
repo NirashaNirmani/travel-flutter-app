@@ -40,17 +40,119 @@ class _BookFlightPageState extends State<BookFlightPage> {
                   fontFamily: 'Times New Roman',
                   color: Colors.white),
             ),
+            const SizedBox(
+              height: 20,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  height: 40,
+                  width: 150,
+                  decoration: BoxDecoration(
+                      color: Colors.white70,
+                      borderRadius: BorderRadius.circular(20)),
+                  alignment: Alignment.center,
+                  child: const Text(
+                    'One Way',
+                    style: TextStyle(
+                        fontSize: 18,
+                        color: Colors.black,
+                        fontWeight: FontWeight.w500),
+                  ),
+                ),
+                Container(
+                  height: 40,
+                  width: 150,
+                  decoration: BoxDecoration(
+                      color: Colors.white70,
+                      borderRadius: BorderRadius.circular(20)),
+                  alignment: Alignment.center,
+                  child: const Text(
+                    'Round Trip',
+                    style: TextStyle(
+                        fontSize: 18,
+                        color: Colors.black,
+                        fontWeight: FontWeight.w500),
+                  ),
+                )
+              ],
+            ),
+            const SizedBox(
+              height: 20,
+            ),
             Container(
-              padding: const EdgeInsets.all(60),
+              padding: const EdgeInsets.all(30),
               height: 500,
-              width: 400,
+              width: 350,
               decoration: BoxDecoration(
                   color: Colors.blueGrey,
                   borderRadius: BorderRadius.circular(20)),
-              child: const Column(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Expanded(
+                        child: TextFormField(
+                          decoration: InputDecoration(
+                              labelText: 'From',
+                              labelStyle:
+                                  TextStyle(fontSize: 25, color: Colors.black),
+                              prefixIcon: Icon(Icons.add_location),
+                              enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.black)),
+                              border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(10))),
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 10),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Expanded(
+                        child: TextFormField(
+                          decoration: InputDecoration(
+                              labelText: 'To',
+                              labelStyle:
+                                  TextStyle(fontSize: 25, color: Colors.black),
+                              prefixIcon: Icon(Icons.add_location),
+                              enabledBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(color: Colors.black)),
+                              border: OutlineInputBorder(
+                                  borderSide: BorderSide(color: Colors.black),
+                                  borderRadius: BorderRadius.circular(10))),
+                        ),
+                      ),
+                      SizedBox(height: 5),
+
+                      
+                    ],
+                  ),
+                  SizedBox(height: 10),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Expanded(
+                        child: TextFormField(
+                          decoration: InputDecoration(
+                              labelText: 'Date',
+                              labelStyle:
+                                  TextStyle(fontSize: 25, color: Colors.black),
+                              prefixIcon: Icon(Icons.date_range),
+                              enabledBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(color: Colors.black)),
+                              border: OutlineInputBorder(
+                                  borderSide: BorderSide(color: Colors.black),
+                                  borderRadius: BorderRadius.circular(10))),
+                        ),
+                      ),
+                      SizedBox(height: 5),
+
+                      
+                    ],
                   )
                 ],
               ),
