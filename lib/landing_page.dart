@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:travel_app/search_page_flight.dart';
+import 'package:travel_app/secondPage.dart';
 import 'package:travel_app/signup_page.dart';
 
 class LandingPage extends StatefulWidget {
@@ -13,6 +14,7 @@ class _LandingPageState extends State<LandingPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: Colors.black,
         appBar: AppBar(
           //title: Text(''),
           backgroundColor: const Color.fromARGB(31, 101, 80, 158),
@@ -79,22 +81,21 @@ class _LandingPageState extends State<LandingPage> {
                       BoxDecoration(borderRadius: BorderRadius.circular(10)),
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                        backgroundColor: const Color.fromARGB(255, 96, 68, 211),
+                        backgroundColor: Color.fromARGB(255, 77, 62, 214),
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(20))),
                     onPressed: () {
-                       Navigator.of(context).push(
-                  MaterialPageRoute(builder: (BuildContext context) {
-                    return const SearchFlightPage();
-                  }),
-                );
-                      
+                      Navigator.of(context).push(
+                        MaterialPageRoute(builder: (BuildContext context) {
+                          return SecondPage();
+                        }),
+                      );
                     },
                     child: const Text(
                       "Get Strated",
                       style: TextStyle(
                           fontSize: 25,
-                          color: Color.fromARGB(255, 211, 8, 8)),
+                          color: Color.fromARGB(255, 252, 250, 250)),
                     ),
                   ),
                 )

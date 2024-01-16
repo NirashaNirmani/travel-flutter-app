@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:travel_app/book_flight.dart';
+import 'package:travel_app/secondPage.dart';
 
 class SearchFlightPage extends StatefulWidget {
   const SearchFlightPage({super.key});
@@ -19,8 +21,9 @@ class _SearchFlightPageState extends State<SearchFlightPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 56, 11, 177),
+        backgroundColor: Colors.transparent,
       ),
       body: SingleChildScrollView(
         child: Container(
@@ -241,22 +244,41 @@ class _SearchFlightPageState extends State<SearchFlightPage> {
         ),
       ),
       bottomNavigationBar: SizedBox(
-        height: 70,
-        child: BottomNavigationBar(items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-              icon: Icon(Icons.home, color: Color.fromARGB(255, 0, 0, 0)),
-              label: 'Home',
-              backgroundColor: Colors.white),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.home_work, color: Color.fromARGB(255, 0, 0, 0)),
-              label: 'Search',
-              backgroundColor: Colors.white),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.favorite, color: Color.fromARGB(255, 0, 0, 0)),
-              label: 'Profile',
-              backgroundColor: Colors.white),
-        ]),
-      ),
+          height: 70,
+          child: BottomNavigationBar(
+            items: const <BottomNavigationBarItem>[
+              BottomNavigationBarItem(
+                  icon: Icon(Icons.home, color: Color.fromARGB(255, 0, 0, 0)),
+                  label: 'Home',
+                  backgroundColor: Colors.white),
+              BottomNavigationBarItem(
+                  icon: Icon(Icons.home_work,
+                      color: Color.fromARGB(255, 0, 0, 0)),
+                  label: 'Search',
+                  backgroundColor: Colors.white),
+              BottomNavigationBarItem(
+                  icon:
+                      Icon(Icons.favorite, color: Color.fromARGB(255, 0, 0, 0)),
+                  label: 'Profile',
+                  backgroundColor: Colors.white),
+            ],
+
+            //currentIndex: _currentIndex,
+            onTap: (index) {
+              // Handle item taps here
+              if (index == 0) {
+                // Navigate to Screen2 when Home is tapped
+              } else if (index == 1) {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => BookFlightPage()));
+                // Handle navigation for Search
+              } else if (index == 2) {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => SecondPage()));
+                // Handle navigation for Profile
+              }
+            },
+          )),
     );
   }
 

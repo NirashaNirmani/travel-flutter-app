@@ -25,6 +25,7 @@ class _BookFlightPageState extends State<BookFlightPage> {
                   color: Color.fromARGB(255, 56, 98, 187),
                   borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(180),
+                    bottomRight: Radius.circular(180)
                   )),
               child: const Image(
                 image: AssetImage('assets/flight.png'),
@@ -89,7 +90,7 @@ class _BookFlightPageState extends State<BookFlightPage> {
               height: 400,
               width: 350,
               decoration: BoxDecoration(
-                  color: Color.fromARGB(255, 153, 156, 204),
+                  color: Color.fromARGB(255, 209, 210, 216),
                   borderRadius: BorderRadius.circular(20)),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -103,12 +104,13 @@ class _BookFlightPageState extends State<BookFlightPage> {
                               labelText: 'From',
                               labelStyle: const TextStyle(
                                   fontSize: 25,
-                                  color: Color.fromARGB(255, 255, 255, 255)),
+                                  color: Color.fromARGB(255, 0, 0, 0)),
                               prefixIcon: const Icon(Icons.add_location),
                               enabledBorder: OutlineInputBorder(
                                   borderSide:
                                       const BorderSide(color: Colors.black),
-                                  borderRadius: BorderRadius.circular(20)),
+                                      
+                                  borderRadius: BorderRadius.circular(20),),
                               border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(20))),
                         ),
@@ -174,7 +176,7 @@ class _BookFlightPageState extends State<BookFlightPage> {
                             borderRadius: BorderRadius.circular(10)),
                         child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
-                              backgroundColor: const Color.fromARGB(255, 59, 13, 187),
+                              backgroundColor: Color.fromARGB(255, 51, 60, 180),
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(20))),
                           onPressed: () {
@@ -189,7 +191,7 @@ class _BookFlightPageState extends State<BookFlightPage> {
                             "View Flight",
                             style: TextStyle(
                                 fontSize: 25,
-                                color: Color.fromARGB(255, 0, 0, 0)),
+                                color: Color.fromARGB(255, 255, 255, 255)),
                           ),
                         ),
                       ),
